@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="header">
+  <span>Art Museum PWA</span>
+  <span class="spacer"></span>
+
+  <button
+    mat-icon-button
+    (click)="toggleView('cards')"
+    [color]="viewMode === 'cards' ? 'accent' : ''"
+  >
+    <mat-icon>grid_view</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    (click)="toggleView('table')"
+    [color]="viewMode === 'table' ? 'accent' : ''"
+  >
+    <mat-icon>table_rows</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="container">
+  @if (loading) {
+  <div class="spinner-container">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  </div>
+  } @else {
+
+  <div [@listAnimation]="artworks.length">
+    @if (viewMode === 'cards') {
+    <div class="card-grid">
+      @for (item of artworks; track item.id) {
+      <app-art-card [artwork]="item"></app-art-card>
+      }
+    </div>
+    } @else {
+    <app-art-table [artworks]="artworks"></app-art-table>
+    }
+  </div>
+  }
+</div>
