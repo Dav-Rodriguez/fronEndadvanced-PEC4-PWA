@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "timestamp": 1767376437851,
+  "index": "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/favicon.ico",
+        "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/index.html",
+        "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/main-KRORNUOJ.js",
+        "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/manifest.webmanifest",
+        "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/polyfills-B6TNHZQ6.js",
+        "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/styles-36AW6TKX.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "art-api-data",
+      "patterns": [
+        "https:\\/\\/api\\.artic\\.edu\\/api\\/v1\\/artworks[^/]*[^/]*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 3600000,
+      "timeoutMs": 10000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    },
+    {
+      "name": "art-images",
+      "patterns": [
+        "https:\\/\\/www\\.artic\\.edu\\/iiif\\/2\\/.*"
+      ],
+      "strategy": "performance",
+      "maxSize": 50,
+      "maxAge": 86400000,
+      "timeoutMs": 10000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/index.html": "0568196f88e51cbdf49d66999a46916ee4048655",
+    "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/main-KRORNUOJ.js": "73ed167c46fd528bb8de0332f78d4e850bf45a11",
+    "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/manifest.webmanifest": "a818564441e69d69acb90a22fc5ac39793a636d7",
+    "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
+    "C:/Program Files/Git/fronEndadvanced-PEC4-PWA/styles-36AW6TKX.css": "173fa74a40cd51f896da8df76e2a21ac7900097e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
